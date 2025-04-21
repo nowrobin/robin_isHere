@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-mobile: 24rem;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -118,5 +122,27 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@theme {
+  --animate-slide-grid: slide-grid 15s ease-in-out infinite;
+
+  @keyframes slide-grid {
+    0% {
+      transform: translate(0%, 0%);
+    }
+    25% {
+      transform: translate(-50%, 0%);
+    }
+    50% {
+      transform: translate(-50%, -50%);
+    }
+    75% {
+      transform: translate(0%, -50%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
   }
 }
