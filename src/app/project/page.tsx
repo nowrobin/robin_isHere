@@ -4,7 +4,6 @@ import RoundedCurvedText from "@/components/curvedText"
 import Header from "@/components/ui/header"
 import ProjectCard from "@/components/ui/projectCard"
 import { useState } from "react"
-import Image from "next/image"
 
 // import { useRef, useState } from "react"
 
