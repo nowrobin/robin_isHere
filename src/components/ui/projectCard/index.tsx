@@ -29,7 +29,7 @@ export default function ProjectCard({
   return (
     <div
       tabIndex={0}
-      className={`flex flex-col gap-1 bg-gray-700 p-0.5 rounded-2xl text-white transform ease-in-out hover:-translate-y-3 shadow-blue-950 shadow-2xl`}
+      className={`flex flex-col gap-1 bg-gray-700 p-0.5 rounded-2xl text-white transform ease-in-out hover:-translate-y-3 shadow-white shadow-2xl`}
       onClick={() => (setOpen(!open), setProject(index))}
       onBlur={() => setOpen(false)}
     >
