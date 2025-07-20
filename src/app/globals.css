@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -125,7 +125,8 @@
   }
 }
 @theme {
-  --color-background: #011f26;
+  /* --color-background: #011f26; */
+  --color-background: #ffff;
   --color-title: #ffff;
   --color-button: #163c40;
   --color-beige: #f0f2f1;

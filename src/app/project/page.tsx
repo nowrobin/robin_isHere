@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import RoundedCurvedText from "@/components/curvedText";
-import Problem from "@/components/problem";
-import Header from "@/components/ui/header";
-import ProjectCard from "@/components/ui/projectCard";
-import Link from "next/link";
-import { useState } from "react";
-import { GithubIcon } from "../../../public/icons/github";
+import RoundedCurvedText from '@/components/curvedText';
+import Problem from '@/components/ui/problem';
+import Header from '@/components/ui/header';
+import ProjectCard from '@/components/ui/projectCard';
+import Link from 'next/link';
+import { useState } from 'react';
+import { GithubIcon } from '../../../public/icons/github';
 
 export default function Main() {
   const [project, setProject] = useState(0);
@@ -26,10 +26,10 @@ export default function Main() {
           index={0}
           project={project}
           setProject={setProject}
-          name={"SULSUL"}
-          videoSrc={"/projectAssets/sulsul/hero.mp4"}
-          logoSrc={"/projectAssets/sulsul/logo.png"}
-          description={"면접 도우미 서비스"}
+          name={'SULSUL'}
+          videoSrc={'/projectAssets/sulsul/hero.mp4'}
+          logoSrc={'/projectAssets/sulsul/logo.png'}
+          description={'면접 도우미 서비스'}
         />
 
         <ProjectCard
@@ -38,10 +38,10 @@ export default function Main() {
           index={1}
           project={project}
           setProject={setProject}
-          name={"SkyLogix-Aviation"}
-          videoSrc={"/projectAssets/skyLogix/hero.mp4"}
-          logoSrc={"/projectAssets/skyLogix/logo.png"}
-          description={"항공 렌탈 서비스"}
+          name={'SkyLogix-Aviation'}
+          videoSrc={'/projectAssets/skyLogix/hero.mp4'}
+          logoSrc={'/projectAssets/skyLogix/logo.png'}
+          description={'항공 렌탈 서비스'}
         />
 
         <ProjectCard
@@ -50,10 +50,10 @@ export default function Main() {
           index={2}
           project={project}
           setProject={setProject}
-          name={"Woogyeol"}
-          videoSrc={"/projectAssets/skyLogix/hero.mp4"}
-          logoSrc={"/projectAssets/woogyeol/logo.png"}
-          description={"모바일 청첩장 서비스"}
+          name={'Woogyeol'}
+          videoSrc={'/projectAssets/skyLogix/hero.mp4'}
+          logoSrc={'/projectAssets/woogyeol/logo.png'}
+          description={'모바일 청첩장 서비스'}
         />
       </section>
       <section className="flex flex-col px-16 py-10 gap-3 mt-10">
@@ -74,13 +74,13 @@ export default function Main() {
         </div>
         <div className="flex flex-row gap-4">
           <Link
-            href={"https://www.sulsul-interview.kr/"}
+            href={'https://www.sulsul-interview.kr/'}
             className="flex flex-row w-34 justify-center gap-2 items-center py-2 text-xl font-semibold group hover:bg-blue-500 bg-gray-500 text-white rounded-2xl"
           >
             WEBSITE
           </Link>
           <Link
-            href={"https://github.com/sulsulsulsul/sulsul"}
+            href={'https://github.com/sulsulsulsul/sulsul'}
             className="flex flex-row w-34 justify-center gap-2 items-center py-2 text-xl font-semibold group hover:bg-blue-500 bg-gray-500 text-white rounded-2xl"
           >
             <GithubIcon className="w-8 h-8 text-gray-800 dark:text-white group-hover:text-white " />
