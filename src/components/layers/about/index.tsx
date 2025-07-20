@@ -4,11 +4,11 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-primary text-quaternary">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center">소개</h2>
+        <h2 className="text-3xl font-bold mb-12 text-start pl-10">소개</h2>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3 mb-8 md:mb-0">
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src="/me.jpeg"
               alt="한정욱"
               width={400}
               height={400}

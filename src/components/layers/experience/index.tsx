@@ -95,10 +95,10 @@ export default function Experience() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg text-center"
               >
-                <h4 className="text-xl font-semibold text-primary mb-2">
+                <h4 className="text-xl font-semibold text-primaryColor mb-2">
                   {lang.name}
                 </h4>
-                <p className="text-2xl font-bold text-secondary mb-2">
+                <p className="text-2xl font-bold text-secondaryColor mb-2">
                   {lang.score}
                 </p>
                 <p className="text-gray-600 text-sm">{lang.date}</p>

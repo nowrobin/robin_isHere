@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0">
           <Image
-            src="/placeholder.svg?height=400&width=400"
+            src="/me2.png"
             alt="한정욱"
             width={400}
             height={400}

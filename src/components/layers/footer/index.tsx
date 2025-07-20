@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-primary text-quaternary py-8">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-start">
         <div className="mb-4">
           <h3 className="text-xl font-semibold mb-2">연락처</h3>
           <p className="mb-2">
@@ -21,7 +21,7 @@ export default function Footer() {
             </a>
           </p>
         </div>
-        <div className="flex justify-center space-x-6 mb-4">
+        <div className="flex justify-start space-x-6 mb-4">
           <a
             href="https://github.com/nowrobin"
             target="_blank"

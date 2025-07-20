@@ -17,6 +17,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.6",
+    "gsap": "^3.13.0",
     "konva": "^9.3.22",
     "lucide-react": "^0.488.0",
     "next": "15.3.0",
