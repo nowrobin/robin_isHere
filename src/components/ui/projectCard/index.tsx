@@ -1,6 +1,6 @@
-import { Video } from "@/components/ui/video/video";
-import Image from "next/image";
-import { Dispatch, SetStateAction } from "react";
+// import { Video } from '@/components/ui/video/video';
+import Image from 'next/image';
+import { Dispatch, SetStateAction } from 'react';
 
 interface CardDetail {
   index: number;
@@ -34,14 +34,14 @@ export default function ProjectCard({
       onBlur={() => setOpen(false)}
     >
       <div className={``}>
-        <Video src={videoSrc} play={modalOpen || !open}></Video>
+        {/* <Video src={videoSrc} play={modalOpen || !open}></Video> */}
       </div>
       <section
         className={`flex flex-row gap-3 p-3  items-center justify-start`}
       >
         <Image
           src={logoSrc}
-          alt={"logo"}
+          alt={'logo'}
           width={64}
           height={40}
           className="rounded-2xl bg-white"

@@ -1,3 +1,4 @@
+import GSAPEffect from '@/components/gsap';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -30,14 +31,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0">
-          <Image
-            src="/me2.png"
-            alt="한정욱"
-            width={400}
-            height={400}
-            className="rounded-lg mx-auto object-cover"
-            priority
-          />
+          <GSAPEffect />
         </div>
       </div>
     </section>

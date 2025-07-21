@@ -166,3 +166,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.mediaGrid {
+  @apply hidden md:grid grid-cols-3 gap-[1vw] max-md:gap-[2vw];
+}
+.mediaItems {
+  @apply w-[8vw] h-[8vw] max-md:w-[18vw] max-md:h-[18vw] object-contain rounded-[20px] block pointer-events-none will-change-transform;
+}

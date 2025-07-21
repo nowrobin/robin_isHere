@@ -4,3 +4,11 @@ export type ContentDetails = {
   highlight: string;
   summary: string;
 };
+
+export type VideoProps = {
+  src: string;
+  play: boolean;
+  className: string;
+  link: string;
+  githubLink: string;
+};
