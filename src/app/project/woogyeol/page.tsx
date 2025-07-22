@@ -18,12 +18,12 @@ const projectImages = [
     description: '완성본을 확인하고 공유할 수 있는 청첩장 에디터',
   },
   {
-    src: '/projectAssets/woogyeol/rsvpStatPhototalk.mp4',
+    src: 'https://drive.google.com/uc?export=view&id=1ZHmZJ_GRhy5-IwvgeD8Q34nZZNs59kS4',
     alt: '참석 여부 관리',
     description: '실시간 참석 여부 조사 및 관리 시스템',
   },
   {
-    src: '/projectAssets/woogyeol/photoTalk.mp4',
+    src: 'https://drive.google.com/uc?export=view&id=1PVB6WTKfim29eJ1eWlW0PPQwf5pQ228W',
     alt: '실시간 포토월',
     description: '결혼식 당일 실시간으로 사진을 공유할 수 있는 포토월',
   },
