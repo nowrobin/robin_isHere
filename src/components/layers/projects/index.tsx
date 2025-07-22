@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Woogyeol - 우리 결혼했어요',
     description: '커스텀 모바일 청첩장 서비스',
-    videoSrc: '/projectAssets/woogyeol/invitationResult.mp4',
+    videoSrc: '/projectAssets/woogyeol/invitationResult.webm',
     logoSrc: '/projectAssets/woogyeol/logo.png',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'React-Query', 'Zustand'],
     link: 'https://woogyeol.site/',
@@ -15,9 +15,9 @@ const projects = [
     projectURL: '/project/woogyeol',
   },
   {
-    title: 'SULSUL - 올인원 면접연습 서비스',
+    title: 'SULSUL - 올인원 면접연습',
     description: '종합적인 면접 준비 서비스',
-    videoSrc: '/projectAssets/sulsul/hero.mp4',
+    videoSrc: '/projectAssets/sulsul/hero.webm',
     logoSrc: '/projectAssets/sulsul/logo.png',
     tags: ['Next.js', 'Tailwind CSS', 'Shadcn', 'React-Query', 'Storybook'],
     link: 'https://www.sulsul-interview.kr/',
@@ -27,7 +27,7 @@ const projects = [
   {
     title: 'SkyLogix Aviation',
     description: '항공 아카데미 웹사이트',
-    videoSrc: '/projectAssets/skyLogix/hero.mp4',
+    videoSrc: '/projectAssets/skyLogix/hero.webm',
     logoSrc: '/projectAssets/skyLogix/logo.png',
     tags: [
       'Next.js',

@@ -119,7 +119,7 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Video
-                src={'/projectAssets/skyLogix/hero.mp4'}
+                src={'/projectAssets/skyLogix/hero.webm'}
                 play={true}
                 className={''}
                 link={''}
