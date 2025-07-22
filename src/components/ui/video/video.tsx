@@ -39,7 +39,7 @@ export function Video({ src, play, className, link, githubLink }: VideoProps) {
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <source src={src} type="video/mp4" />
+        <source src={src} type="video/webm" />
       </video>
       {link && githubLink && (
         <>
