@@ -12,3 +12,16 @@ export type VideoProps = {
   link: string;
   githubLink: string;
 };
+
+// Velog 포스트 데이터 타입 정의 (route.ts와 동일하게)
+export interface VelogPost {
+  id: string;
+  title: string;
+  link: string;
+  thumbnailUrl?: string;
+  publishedDate: string;
+  shortDescription?: string;
+  username: string;
+  likes: number;
+  commentsCount: number;
+}

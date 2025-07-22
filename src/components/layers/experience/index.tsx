@@ -57,11 +57,13 @@ export default function Experience() {
                   <h4 className="text-xl font-semibold text-primary">
                     {exp.title}
                   </h4>
-                  <span className="text-sm text-gray-500 bg-tertiary px-3 py-1 rounded-full mt-2 md:mt-0">
+                  <span className="text-sm text-white font-bold bg-tertiary px-3 py-1 rounded-full mt-2 md:mt-0">
                     {exp.type}
                   </span>
                 </div>
-                <p className="text-secondary font-medium mb-2">{exp.period}</p>
+                <p className="text-secondaryColor font-medium mb-2">
+                  {exp.period}
+                </p>
                 <p className="text-gray-600">{exp.description}</p>
               </div>
             ))}
@@ -77,7 +79,9 @@ export default function Experience() {
                 <h4 className="text-xl font-semibold text-primary mb-2">
                   {edu.school}
                 </h4>
-                <p className="text-secondary font-medium mb-2">{edu.major}</p>
+                <p className="text-secondaryColor font-medium mb-2">
+                  {edu.major}
+                </p>
                 <p className="text-gray-600">{edu.period}</p>
               </div>
             ))}

@@ -2,14 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { Video } from '@/components/ui/video/video';
-
+import Image from 'next/image';
 const projects = [
   {
     title: 'Woogyeol - 우리 결혼했어요',
     description: '커스텀 모바일 청첩장 서비스',
-    image: '/placeholder.svg?height=300&width=400',
-    videoSrc: '/projectAssets/sulsul/hero.mp4',
-    logoSrc: '/images/woogyeol-logo.png',
+    videoSrc: '/projectAssets/woogyeol/invitationResult.mp4',
+    logoSrc: '/projectAssets/woogyeol/logo.png',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'React-Query', 'Zustand'],
     link: 'https://woogyeol.site/',
     github: 'https://github.com/team-wedding',
@@ -19,8 +18,7 @@ const projects = [
     title: 'SULSUL - 올인원 면접연습 서비스',
     description: '종합적인 면접 준비 서비스',
     videoSrc: '/projectAssets/sulsul/hero.mp4',
-    logoSrc: '/images/sulsul-logo.png',
-    image: '/placeholder.svg?height=300&width=400',
+    logoSrc: '/projectAssets/sulsul/logo.png',
     tags: ['Next.js', 'Tailwind CSS', 'Shadcn', 'React-Query', 'Storybook'],
     link: 'https://www.sulsul-interview.kr/',
     github: 'https://github.com/sulsulsulsul/sulsul',
@@ -29,10 +27,16 @@ const projects = [
   {
     title: 'SkyLogix Aviation',
     description: '항공 아카데미 웹사이트',
-    image: '/placeholder.svg?height=300&width=400',
     videoSrc: '/projectAssets/skyLogix/hero.mp4',
-    logoSrc: '/images/skylogix-logo.png',
-    tags: ['Next.js', 'TypeScript', 'Node-mailer', 'Vercel'],
+    logoSrc: '/projectAssets/skyLogix/logo.png',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Node-mailer',
+      'Vercel',
+      'Shadcn',
+      'Tailwind CSS',
+    ],
     link: 'https://www.skylogixaviation.com/',
     github: 'https://github.com/nowrobin/SkyLogixAviation',
     projectURL: '/project/skylogix',
@@ -62,8 +66,17 @@ export default function Projects() {
                 githubLink={project.github}
               />
               <div className="p-6 flex flex-col justify-between relative">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="flex flex-row items-center justify-start mb-4 gap-8 ">
+                  <div className="size-16 relative">
+                    <Image src={project.logoSrc} alt={`logo`} fill />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold my-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-2">{project.description}</p>
+                  </div>
+                </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span

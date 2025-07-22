@@ -4,25 +4,21 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { Video } from '@/components/ui/video/video';
 
 const projectImages = [
   {
-    src: '/placeholder.svg?height=600&width=800&text=SkyLogix+Homepage',
-    alt: 'SkyLogix Aviation 홈페이지',
-    description: '전문적이고 신뢰감 있는 항공 아카데미 메인 페이지',
-  },
-  {
-    src: '/placeholder.svg?height=600&width=800&text=Aircraft+Rental',
+    src: '/projectAssets/skyLogix/skyLogixPlanes.png',
     alt: '항공기 대여 페이지',
     description: '다양한 항공기 모델과 대여 옵션을 제공하는 페이지',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Instructor+Services',
+    src: '/projectAssets/skyLogix/skyLogixSteps.png',
     alt: '조종사 교육 서비스',
-    description: '전문 조종사 교육 프로그램 및 강사진 소개',
+    description: '전문 조종사 교육 프로그램 소개',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Contact+Form',
+    src: '/projectAssets/skyLogix/skyLogixContact.png',
     alt: '문의 양식',
     description: 'Node-mailer를 활용한 실시간 이메일 문의 시스템',
   },
@@ -33,6 +29,7 @@ const techStack = [
   'TypeScript',
   'Node-mailer',
   'Vercel',
+  'Shadcn',
   'Tailwind CSS',
 ];
 
@@ -100,7 +97,7 @@ export default function SkyLogixProject() {
                   href="https://www.skylogixaviation.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors"
+                  className="inline-flex items-center gap-2  border-1 border-primary bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary hover:text-secondaryColor transition-colors"
                 >
                   <ExternalLink size={20} />
                   라이브 데모
@@ -121,12 +118,12 @@ export default function SkyLogixProject() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Image
-                src="/placeholder.svg?height=500&width=600&text=SkyLogix+Hero+Image"
-                alt="SkyLogix Aviation 프로젝트 메인 이미지"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-lg"
+              <Video
+                src={'/projectAssets/skyLogix/hero.mp4'}
+                play={true}
+                className={''}
+                link={''}
+                githubLink={''}
               />
             </motion.div>
           </div>

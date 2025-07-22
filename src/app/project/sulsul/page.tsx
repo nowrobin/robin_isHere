@@ -4,25 +4,26 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { Video } from '@/components/ui/video/video';
 
 const projectImages = [
   {
-    src: '/placeholder.svg?height=600&width=800&text=SULSUL+Landing+Page',
+    src: '/projectAssets/sulsul/hero.png',
     alt: 'SULSUL 랜딩 페이지',
     description: '직관적이고 모던한 디자인의 서비스 소개 페이지',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Interview+Practice',
+    src: '/projectAssets/sulsul/practiceMainPage.png',
     alt: '면접 연습 페이지',
     description: '실제 면접과 유사한 환경에서 연습할 수 있는 인터페이스',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Question+Selection',
+    src: '/projectAssets/sulsul/practiceModal.png',
     alt: '질문 선택 모달',
     description: '자소서 기반으로 생성된 맞춤형 면접 질문 선택',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Feedback+System',
+    src: '/projectAssets/sulsul/feedBackPage.png',
     alt: '피드백 시스템',
     description: 'AI 기반 답변 분석 및 개선점 제안',
   },
@@ -121,7 +122,7 @@ export default function SulsulProject() {
                   href="https://www.sulsul-interview.kr/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors"
+                  className="inline-flex items-center gap-2  border-1 border-primary  bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary hover:text-secondaryColor transition-colors"
                 >
                   <ExternalLink size={20} />
                   라이브 데모
@@ -142,12 +143,12 @@ export default function SulsulProject() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Image
-                src="/placeholder.svg?height=500&width=600&text=SULSUL+Hero+Image"
-                alt="SULSUL 프로젝트 메인 이미지"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-lg"
+              <Video
+                src={'/projectAssets/sulsul/hero.mp4'}
+                play={true}
+                className={''}
+                link={''}
+                githubLink={''}
               />
             </motion.div>
           </div>
@@ -185,9 +186,10 @@ export default function SulsulProject() {
               >
                 <div className="relative h-64 md:h-80">
                   <Image
-                    src={image.src || '/placeholder.svg'}
+                    src={image.src}
                     alt={image.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>

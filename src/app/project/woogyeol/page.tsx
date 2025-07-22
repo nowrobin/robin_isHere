@@ -4,25 +4,26 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { Video } from '@/components/ui/video/video';
 
 const projectImages = [
   {
-    src: '/placeholder.svg?height=600&width=800&text=Woogyeol+Main+Page',
+    src: '/projectAssets/woogyeol/invitationCreate.mp4',
     alt: 'Woogyeol 메인 페이지',
     description: '사용자가 직접 청첩장을 제작할 수 있는 메인 인터페이스',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Wedding+Card+Editor',
-    alt: '청첩장 에디터',
-    description: '직관적인 드래그 앤 드롭 방식의 청첩장 편집 도구',
+    src: '/projectAssets/woogyeol/invitationResult.mp4',
+    alt: '청첩장 완성본',
+    description: '완성본을 확인하고 공유할 수 있는 청첩장 에디터',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=RSVP+Management',
+    src: '/projectAssets/woogyeol/rsvpStatPhototalk.mp4',
     alt: '참석 여부 관리',
     description: '실시간 참석 여부 조사 및 관리 시스템',
   },
   {
-    src: '/placeholder.svg?height=600&width=800&text=Photo+Wall',
+    src: '/projectAssets/woogyeol/photoTalk.mp4',
     alt: '실시간 포토월',
     description: '결혼식 당일 실시간으로 사진을 공유할 수 있는 포토월',
   },
@@ -118,7 +119,7 @@ export default function WoogyeolProject() {
                   href="https://woogyeol.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors"
+                  className="inline-flex items-center gap-2  border-1 border-primary  bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary hover:text-secondaryColor transition-colors"
                 >
                   <ExternalLink size={20} />
                   라이브 데모
@@ -140,7 +141,7 @@ export default function WoogyeolProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Woogyeol+Hero+Image"
+                src="/projectAssets/woogyeol/woogyeolHero.png"
                 alt="Woogyeol 프로젝트 메인 이미지"
                 width={600}
                 height={500}
@@ -180,12 +181,13 @@ export default function WoogyeolProject() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="relative h-64 md:h-80">
-                  <Image
-                    src={image.src || '/placeholder.svg'}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
+                <div className="relative h-64 md:h-92">
+                  <Video
+                    src={image.src}
+                    play={true}
+                    className={'w-full h-full object-cover'}
+                    link={''}
+                    githubLink={''}
                   />
                 </div>
                 <div className="p-6">
