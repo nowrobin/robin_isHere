@@ -33,11 +33,15 @@ export function Video({ src, play, className, link, githubLink }: VideoProps) {
         muted
         preload="auto"
         loop
-        autoPlay={play}
+        autoPlay
         onCanPlay={() => setIsLoaded(true)}
+        onError={(e) => {
+          console.error('Video load error:', e);
+        }}
         className={`w-full h-full object-cover rounded-t-lg transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
+        controls
       >
         <source src={src} type="video/webm" />
       </video>
