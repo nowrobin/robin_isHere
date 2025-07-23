@@ -12,14 +12,6 @@ export default function Footer() {
               nowrobin3@gmail.com
             </a>
           </p>
-          <p className="mb-4">
-            <a
-              href="tel:01034666927"
-              className="hover:text-tertiary transition-colors"
-            >
-              010-3466-6927
-            </a>
-          </p>
         </div>
         <div className="flex justify-start space-x-6 mb-4">
           <a
