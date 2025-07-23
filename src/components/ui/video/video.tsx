@@ -34,6 +34,9 @@ export function Video({ src, play, className, link, githubLink }: VideoProps) {
         preload="auto"
         loop
         autoPlay
+        playsInline
+        webkit-playsinline
+        controls={false}
         onCanPlay={() => setIsLoaded(true)}
         onError={(e) => {
           console.error('Video load error:', e);
