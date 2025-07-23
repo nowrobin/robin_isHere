@@ -144,7 +144,9 @@ export default function SulsulProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Video
-                src={'/projectAssets/sulsul/hero.webm'}
+                src={
+                  'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//sulsulHero.webm'
+                }
                 play={true}
                 className={''}
                 link={''}

@@ -3,11 +3,13 @@
 import { motion } from 'framer-motion';
 import { Video } from '@/components/ui/video/video';
 import Image from 'next/image';
-const projects = [
+import { ProjectDetail } from '@/types/content';
+const projects: ProjectDetail[] = [
   {
     title: 'Woogyeol - 우리 결혼했어요',
     description: '커스텀 모바일 청첩장 서비스',
-    videoSrc: '/projectAssets/woogyeol/invitationResult.webm',
+    videoSrc:
+      'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//invitationResult.webm',
     logoSrc: '/projectAssets/woogyeol/logo.png',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'React-Query', 'Zustand'],
     link: 'https://woogyeol.site/',
@@ -17,7 +19,8 @@ const projects = [
   {
     title: 'SULSUL - 올인원 면접연습',
     description: '종합적인 면접 준비 서비스',
-    videoSrc: '/projectAssets/sulsul/hero.webm',
+    videoSrc:
+      'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//sulsulHero.webm',
     logoSrc: '/projectAssets/sulsul/logo.png',
     tags: ['Next.js', 'Tailwind CSS', 'Shadcn', 'React-Query', 'Storybook'],
     link: 'https://www.sulsul-interview.kr/',
@@ -27,7 +30,8 @@ const projects = [
   {
     title: 'SkyLogix Aviation',
     description: '항공 아카데미 웹사이트',
-    videoSrc: '/projectAssets/skyLogix/hero.webm',
+    videoSrc:
+      'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//skyLogixHero.webm',
     logoSrc: '/projectAssets/skyLogix/logo.png',
     tags: [
       'Next.js',

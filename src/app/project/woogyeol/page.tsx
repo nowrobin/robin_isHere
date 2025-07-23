@@ -8,22 +8,22 @@ import { Video } from '@/components/ui/video/video';
 
 const projectImages = [
   {
-    src: '/projectAssets/woogyeol/invitationCreate.webm',
+    src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//invitationCreate.webm',
     alt: 'Woogyeol 메인 페이지',
     description: '사용자가 직접 청첩장을 제작할 수 있는 메인 인터페이스',
   },
   {
-    src: '/projectAssets/woogyeol/invitationResult.webm',
+    src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//invitationResult.webm',
     alt: '청첩장 완성본',
     description: '완성본을 확인하고 공유할 수 있는 청첩장 에디터',
   },
   {
-    src: '/projectAssets/woogyeol/rsvpStat.webm',
+    src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//rsvpStat.webm',
     alt: '참석 여부 관리',
     description: '실시간 참석 여부 조사 및 관리 시스템',
   },
   {
-    src: '/projectAssets/woogyeol/photoTalk.webm',
+    src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//photoTalk.webm',
     alt: '실시간 포토월',
     description: '결혼식 당일 실시간으로 사진을 공유할 수 있는 포토월',
   },

@@ -25,3 +25,14 @@ export interface VelogPost {
   likes: number;
   commentsCount: number;
 }
+
+export interface ProjectDetail {
+  title: string;
+  description: string;
+  videoSrc: string;
+  logoSrc: string;
+  tags: string[];
+  link: string;
+  github: string;
+  projectURL: string;
+}

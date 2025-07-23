@@ -41,7 +41,6 @@ export function Video({ src, play, className, link, githubLink }: VideoProps) {
         className={`w-full h-full object-cover rounded-t-lg transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
-        controls
       >
         <source src={src} type="video/webm" />
       </video>
