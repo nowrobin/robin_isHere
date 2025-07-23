@@ -74,10 +74,22 @@ export default function SulsulProject() {
             <ArrowLeft size={20} />
             포트폴리오로 돌아가기
           </Link>
-          <h1 className="text-4xl font-bold">
-            SULSUL - 올인원 면접연습 서비스
-          </h1>
-          <p className="text-xl mt-2">AI 기반 맞춤형 면접 준비 플랫폼</p>
+
+          <div className="flex items-center gap-4">
+            <Image
+              src={'/projectAssets/sulsul/logo.png'}
+              alt={''}
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <>
+              <h1 className="text-4xl font-bold">
+                SULSUL - 올인원 면접연습 서비스
+              </h1>
+              <p className="text-xl mt-2">AI 기반 맞춤형 면접 준비 플랫폼</p>
+            </>
+          </div>
         </div>
       </motion.header>
 

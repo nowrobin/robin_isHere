@@ -72,7 +72,7 @@ export default function Projects() {
               <div className="p-6 flex flex-col justify-between relative">
                 <div className="flex flex-row items-center justify-start mb-4 gap-8 ">
                   <div className="size-16 relative">
-                    <Image src={project.logoSrc} alt={`logo`} fill />
+                    <Image src={project.logoSrc} alt={`logo`} fill sizes="16" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold my-2">
