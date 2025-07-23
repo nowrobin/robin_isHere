@@ -35,7 +35,7 @@ export function Video({ src, play, className, link, githubLink }: VideoProps) {
         loop
         autoPlay
         playsInline
-        webkit-playsinline
+        webkit-playsinline="true"
         controls={false}
         onCanPlay={() => setIsLoaded(true)}
         onError={(e) => {

@@ -51,8 +51,19 @@ export default function SkyLogixProject() {
             <ArrowLeft size={20} />
             포트폴리오로 돌아가기
           </Link>
-          <h1 className="text-4xl font-bold">SkyLogix Aviation</h1>
-          <p className="text-xl mt-2">항공 아카데미 웹사이트</p>
+          <div className="flex items-center gap-4">
+            <Image
+              src={'/projectAssets/skyLogix/logo.png'}
+              alt={''}
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <>
+              <h1 className="text-4xl font-bold">SkyLogix Aviation</h1>
+              <p className="text-xl mt-2">항공 아카데미 웹사이트</p>
+            </>
+          </div>
         </div>
       </motion.header>
 
