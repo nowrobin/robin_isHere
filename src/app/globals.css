@@ -173,3 +173,25 @@
 .mediaItems {
   @apply w-[8vw] h-[8vw] max-md:w-[18vw] max-md:h-[18vw] object-contain rounded-[20px] block pointer-events-none will-change-transform;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -84,7 +84,6 @@ export default function WoogyeolProject() {
             />
             <>
               <h1 className="text-4xl font-bold">Woogyeol - 우리 결혼했어요</h1>
-              <p className="text-xl mt-2">모바일 청첩장 제작 및 공유 서비스</p>
             </>
           </div>
         </div>

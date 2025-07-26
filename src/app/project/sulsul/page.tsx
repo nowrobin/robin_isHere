@@ -48,9 +48,9 @@ const challenges = [
       'usePrefetch를 활용하여 데이터를 미리 받아온 후 렌더링을 진행하도록 개선했습니다. 전체 데이터를 한 번에 불러오는 대신 자소서 질문 단위로 요청하여 빈 화면을 최소화하고, 오토포커스를 통해 미리 호출된 질문을 즉시 표시하여 UX를 개선했습니다.',
   },
   {
-    title: '디자인 검증을 위한 Storybook 배포',
+    title: '디자인 검증을 위한 Storybook 배포로 개발단계 최소화',
     problem:
-      '기능 검증이 완료되지 않은 작업을 디자이너와 공유할 때 배포된 사이트를 통해서만 확인이 가능했습니다. 불안정한 상태에서 배포를 진행해야 했으며, 배포 시간이 오래 걸리고 에러도 자주 발생했습니다.',
+      '기능 검증이 완료되지 않은 작업을 디자이너와 공유할 때 배포된 사이트를 통해서만 확인이 가능했습니다. 불안정한 상태에서 배포를 진행해야 했으며, 디자인 수정만을 위해서 배포를 하고 검증 받는 단계까지.',
     solution:
       '디자이너 확인이 필요한 컴포넌트는 Storybook과 Chromatic을 활용하여 별도 배포하고, 이를 통해 디자인 피드백을 받는 방식으로 개선했습니다. 디자인 검증 속도가 빨라지고 개발 일정 조율이 원활해졌으며, 실시간 피드백으로 개발 속도가 향상되었습니다.',
   },
@@ -59,9 +59,8 @@ const challenges = [
 export default function SulsulProject() {
   return (
     <div className="min-h-screen bg-quaternary">
-      {/* Header */}
       <motion.header
-        className="bg-primary text-quaternary py-6"
+        className="bg-primary text-quaternary py-6 md:fixed top-0 left-0 w-full z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -95,7 +94,7 @@ export default function SulsulProject() {
 
       {/* Project Overview */}
       <motion.section
-        className="py-16 bg-white"
+        className="py-16 bg-white mt-30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -164,6 +163,62 @@ export default function SulsulProject() {
                 link={''}
                 githubLink={''}
               />
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Project Details */}
+      <motion.section
+        className="py-16 bg-primary text-quaternary"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="container mx-auto px-6">
+          <motion.h2
+            className="text-3xl font-bold mb-12 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            프로젝트 상세 정보
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">개발 기간</h3>
+              <p className="text-lg">2024.08 ~ 2024.11</p>
+              <p className="text-sm mt-2">프론트엔드 개발</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">주요 기능</h3>
+              <p className="text-lg">AI 면접 연습</p>
+              <p className="text-sm mt-2">자소서 기반 질문 생성 및 피드백</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">담당 역할</h3>
+              <p className="text-lg">프론트엔드 개발</p>
+              <p className="text-sm mt-2">UI 구현, API 연동, Storybook 배포</p>
             </motion.div>
           </div>
         </div>
@@ -268,62 +323,6 @@ export default function SulsulProject() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Project Details */}
-      <motion.section
-        className="py-16 bg-primary text-quaternary"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-6">
-          <motion.h2
-            className="text-3xl font-bold mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            프로젝트 상세 정보
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">개발 기간</h3>
-              <p className="text-lg">2024.08 ~ 2024.11</p>
-              <p className="text-sm mt-2">프론트엔드 개발</p>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">주요 기능</h3>
-              <p className="text-lg">AI 면접 연습</p>
-              <p className="text-sm mt-2">자소서 기반 질문 생성 및 피드백</p>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">담당 역할</h3>
-              <p className="text-lg">프론트엔드 개발</p>
-              <p className="text-sm mt-2">UI 구현, API 연동, Storybook 배포</p>
-            </motion.div>
           </div>
         </div>
       </motion.section>
