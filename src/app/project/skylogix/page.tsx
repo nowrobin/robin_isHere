@@ -36,7 +36,6 @@ const techStack = [
 export default function SkyLogixProject() {
   return (
     <div className="min-h-screen bg-quaternary">
-      {/* Header */}
       <motion.header
         className="bg-primary text-quaternary py-6"
         initial={{ opacity: 0, y: -50 }}
@@ -66,8 +65,6 @@ export default function SkyLogixProject() {
           </div>
         </div>
       </motion.header>
-
-      {/* Project Overview */}
       <motion.section
         className="py-16 bg-white"
         initial={{ opacity: 0 }}
@@ -130,7 +127,9 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Video
-                src={'/projectAssets/skyLogix/hero.webm'}
+                src={
+                  'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//skyLogixHero.webm'
+                }
                 play={true}
                 className={''}
                 link={''}
@@ -140,8 +139,60 @@ export default function SkyLogixProject() {
           </div>
         </div>
       </motion.section>
-
-      {/* Project Images Gallery */}
+      <motion.section
+        className="py-16 bg-primary text-quaternary"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="container mx-auto px-6">
+          <motion.h2
+            className="text-3xl font-bold mb-12 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            프로젝트 상세 정보
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">개발 기간</h3>
+              <p className="text-lg">2025.03 ~ 2025.04</p>
+              <p className="text-sm mt-2">1개월 집중 개발</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">개발 형태</h3>
+              <p className="text-lg">개인 프로젝트</p>
+              <p className="text-sm mt-2">풀스택 개발</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4">주요 성과</h3>
+              <p className="text-lg">비즈니스 웹사이트</p>
+              <p className="text-sm mt-2">실제 운영 중인 상업적 웹사이트</p>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
       <motion.section
         className="py-16 bg-quaternary"
         initial={{ opacity: 0 }}
@@ -190,7 +241,6 @@ export default function SkyLogixProject() {
         </div>
       </motion.section>
 
-      {/* Key Features */}
       <motion.section
         className="py-16 bg-white"
         initial={{ opacity: 0 }}
@@ -250,62 +300,6 @@ export default function SkyLogixProject() {
               <p className="text-gray-700">
                 모든 디바이스에서 최적화된 사용자 경험 제공
               </p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Project Details */}
-      <motion.section
-        className="py-16 bg-primary text-quaternary"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-6">
-          <motion.h2
-            className="text-3xl font-bold mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            프로젝트 상세 정보
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">개발 기간</h3>
-              <p className="text-lg">2025.03 ~ 2025.04</p>
-              <p className="text-sm mt-2">1개월 집중 개발</p>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">개발 형태</h3>
-              <p className="text-lg">개인 프로젝트</p>
-              <p className="text-sm mt-2">풀스택 개발</p>
-            </motion.div>
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4">주요 성과</h3>
-              <p className="text-lg">비즈니스 웹사이트</p>
-              <p className="text-sm mt-2">실제 운영 중인 상업적 웹사이트</p>
             </motion.div>
           </div>
         </div>
