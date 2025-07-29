@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-
+import './i18n';
+import I18nProvider from '@/components/i18n/i18nProvider';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: '한정욱 - Frontend Developer',
+  title: 'Jungwook Han | Frontend Developer',
   description:
     '한정욱의 포트폴리오 - 사용자 경험을 중시하는 프론트엔드 개발자, React, Next.js, TypeScript 전문',
   icons: {
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );

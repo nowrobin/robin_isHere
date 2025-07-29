@@ -15,7 +15,6 @@ export default function GSAPEffect() {
   //Images
   const images = [
     '/icons/react_Icon.svg',
-
     '/icons/next_Icon.svg',
     '/icons/reactQuery_Icon.svg',
     '/icons/zustand_Icon.svg',

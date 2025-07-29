@@ -1,3 +1,5 @@
+import { Experience } from '@/components/layers/experience';
+
 export type ContentDetails = {
   title: string;
   keywords: string[];
@@ -35,4 +37,23 @@ export interface ProjectDetail {
   link: string;
   github: string;
   projectURL: string;
+}
+
+export interface ExperienceDetail {
+  title: string;
+  period: string;
+  description: string;
+  type: string;
+  result: string;
+}
+
+export interface EducationDetail {
+  school: string;
+  major: string;
+  period: string;
+}
+
+export interface Hero {
+  name: string;
+  intro: string;
 }

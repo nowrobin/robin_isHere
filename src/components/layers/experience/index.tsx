@@ -1,59 +1,33 @@
-const experiences = [
-  {
-    title: '프로그래머스 풀스택 데브코스 4기',
-    period: '2024.08 ~ 2025.02',
-    description:
-      'KDT 타입스크립트로 함께하는 웹 풀 사이클 개발(React, Node.js)',
-    type: '교육',
-  },
-  {
-    title: '글또 9기',
-    period: '2023.11 ~ 2024.05',
-    description:
-      '글을 작성하는 개발 직군분들이 모여서, 좋은 영향을 주고 서로 같이 자랄 수 있는 커뮤니티',
-    type: '활동',
-  },
-  {
-    title: 'Techeer 실리콘밸리 SW 동계 해커톤',
-    period: '2023.01 ~ 2023.02',
-    description: '한국공학대학교 동아리에서 진행한 해커톤',
-    type: '활동',
-  },
-];
+'use client';
 
-const education = [
-  {
-    school: '한국공학대학교 (한국산업기술대학교)',
-    major: '컴퓨터공학과 소프트웨어 전공',
-    period: '2022.03 ~ 2024.02',
-  },
-  {
-    school: 'Oregon State University',
-    major: 'Mechanical Engineering',
-    period: '2016.08 ~ 2019.05, 2019.03 ~ 2020.12',
-  },
-];
+import { EducationDetail, ExperienceDetail } from '@/types/content';
+import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { name: 'TOEIC', score: '985점', date: '2023.10.29' },
-  { name: 'OPIc', score: 'IH등급', date: '2023.11.03' },
+  { name: 'TOEIC', score: '985', date: '2023.10.29' },
+  { name: 'OPIc', score: 'IH', date: '2023.11.03' },
 ];
 
 export default function Experience() {
+  const { t } = useTranslation();
+
+  const experiences = t('experience', {
+    returnObjects: true,
+  }) as ExperienceDetail[];
+  const education = t('education', {
+    returnObjects: true,
+  }) as EducationDetail[];
   return (
     <section id="experience" className="py-20 bg-quaternary">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center">경험 & 교육</h2>
-
-        {/* Experience & Activities */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-primary">
-            경험 & 활동
+      <div className="container mx-auto px-6 flex flex-col gap-10">
+        <div className="">
+          <h3 className="text-3xl font-semibold mb-8 text-primary">
+            {t('commons.activities')}
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {experiences.map((exp, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                   <h4 className="text-xl font-semibold text-primary">
                     {exp.title}
                   </h4>
@@ -61,37 +35,17 @@ export default function Experience() {
                     {exp.type}
                   </span>
                 </div>
-                <p className="text-secondaryColor font-medium mb-2">
-                  {exp.period}
-                </p>
+                <p className="text-secondaryColor font-medium">{exp.period}</p>
                 <p className="text-gray-600">{exp.description}</p>
+
+                <p className="text-gray-600">{`Results: ${exp.result}`}</p>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Education */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-primary">학력</h3>
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                <h4 className="text-xl font-semibold text-primary mb-2">
-                  {edu.school}
-                </h4>
-                <p className="text-secondaryColor font-medium mb-2">
-                  {edu.major}
-                </p>
-                <p className="text-gray-600">{edu.period}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Language Skills */}
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-primary">
-            어학 능력
+            {t('commons.language')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {languages.map((lang, index) => (
@@ -106,6 +60,24 @@ export default function Experience() {
                   {lang.score}
                 </p>
                 <p className="text-gray-600 text-sm">{lang.date}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="">
+          <h3 className="text-2xl font-semibold mb-8 text-primary">
+            {t('commons.education')}
+          </h3>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+                <h4 className="text-xl font-semibold text-primary mb-2">
+                  {edu.school}
+                </h4>
+                <p className="text-secondaryColor font-medium mb-2">
+                  {edu.major}
+                </p>
+                <p className="text-gray-600">{edu.period}</p>
               </div>
             ))}
           </div>
