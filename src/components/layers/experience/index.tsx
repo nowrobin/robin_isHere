@@ -1,20 +1,7 @@
 'use client';
 
-import { ExperienceDetail } from '@/types/content';
+import { EducationDetail, ExperienceDetail } from '@/types/content';
 import { useTranslation } from 'react-i18next';
-
-const education = [
-  {
-    school: '한국공학대학교 (한국산업기술대학교)',
-    major: '컴퓨터공학과 소프트웨어 전공',
-    period: '2022.03 ~ 2024.02',
-  },
-  {
-    school: 'Oregon State University',
-    major: 'Mechanical Engineering',
-    period: '2016.08 ~ 2019.05, 2019.03 ~ 2020.12',
-  },
-];
 
 const languages = [
   { name: 'TOEIC', score: '985', date: '2023.10.29' },
@@ -27,12 +14,15 @@ export default function Experience() {
   const experiences = t('experience', {
     returnObjects: true,
   }) as ExperienceDetail[];
+  const education = t('education', {
+    returnObjects: true,
+  }) as EducationDetail[];
   return (
     <section id="experience" className="py-20 bg-quaternary">
       <div className="container mx-auto px-6 flex flex-col gap-10">
         <div className="">
           <h3 className="text-3xl font-semibold mb-8 text-primary">
-            경험 & 활동
+            {t('commons.activities')}
           </h3>
           <div className="space-y-4">
             {experiences.map((exp, index) => (

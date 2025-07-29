@@ -104,6 +104,7 @@ const detailsEn = {
       projectURL: '/project/skylogix',
     },
   ],
+
   ///Contact Page
   contactInfo: {
     contactDetail: 'Contact Detail',

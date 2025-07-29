@@ -47,6 +47,12 @@ export interface ExperienceDetail {
   result: string;
 }
 
+export interface EducationDetail {
+  school: string;
+  major: string;
+  period: string;
+}
+
 export interface Hero {
   name: string;
   intro: string;

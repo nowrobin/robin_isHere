@@ -21,7 +21,7 @@ export const commonEn = {
   teamMember: 'Team Member',
   intro: 'Hello!',
   skillSet: 'Tech Stack',
-  activity: 'Experience & Activities',
+  activities: 'Experience & Activities',
   language: 'Languages',
   education: 'Education',
   velog: 'visit Blog',

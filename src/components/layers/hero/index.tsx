@@ -2,6 +2,7 @@
 
 import GSAPEffect from '@/components/gsap';
 import { useTranslation } from 'react-i18next';
+import { Github, BookOpen, ExternalLink, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -18,30 +19,56 @@ export default function Hero() {
           </h1>
           <h2 className="text-2xl md:text-3xl mb-6">Frontend Developer</h2>
           <p className="text-lg mb-8">{t('hero.intro')}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:grid grid-cols-2 justify-items-center items-center gap-4">
             <a
               href="#projects"
-              className="bg-tertiary text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors text-center"
+              className="w-64 h-16 flex justify-center items-center bg-tertiary text-primary text-lg rounded-2xl font-semibold hover:bg-secondary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl transition-colors text-center"
             >
               {t('commons.projectView')}
             </a>
             <a
               href="/contact"
-              className="border-2 border-tertiary text-tertiary px-6 py-3 rounded-full font-semibold hover:bg-tertiary hover:text-primary transition-colors text-center"
+              className="w-64 h-16  flex justify-center items-center border-2 border-tertiary text-tertiary text-lg rounded-2xl font-semibold hover:bg-tertiary hover:text-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl transition-colors text-center"
             >
               {t('commons.contact')}
             </a>
-            <a
-              href="https://velog.io/@nowrobin/posts"
-              className="bg-tertiary text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors text-center"
-            >
-              {t('commons.velog')}
+            <a href="https://github.com/nowrobin" className="w-64 h-16">
+              <button
+                className="w-full h-full group relative flex  justify-center items-center overflow-hidden bg-gray-900 hover:bg-gray-800 text-whitetext-lg font-semibold rounded-2xl shadow-lg transform transition-all duration-300 ease-out
+            hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                <div className="relative flex items-center gap-3">
+                  <Github className="w-6 h-6 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">
+                    {t('commons.github')}
+                  </span>
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0" />
+                </div>
+              </button>
             </a>
-            <a
-              href="https://github.com/nowrobin"
-              className="bg-tertiary text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors text-center"
-            >
-              {t('commons.github')}
+
+            <a href="https://velog.io/@nowrobin/posts" className="w-64 h-16">
+              <button
+                className="group w-full h-full group relative flex  justify-center items-center overflow-hidden bg-gradient-to-r from-orange-500 to-pink-500
+            hover:from-orange-600 hover:to-pink-600 text-white
+            px-8 py-6 text-lg font-semibold rounded-2xl shadow-lg
+            transform transition-all duration-300 ease-out
+            hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="relative flex items-center gap-3">
+                  <BookOpen
+                    className="
+              w-6 h-6 transition-all duration-300
+              group-hover:rotate-12 group-hover:scale-110
+            "
+                  />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">
+                    {t('commons.velog')}
+                  </span>
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0" />
+                </div>
+              </button>
             </a>
           </div>
         </div>

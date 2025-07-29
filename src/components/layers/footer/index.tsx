@@ -1,9 +1,19 @@
+'use client';
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-primary text-quaternary py-8">
       <div className="container mx-auto px-6 text-start">
         <div className="mb-4">
-          <h3 className="text-xl font-semibold mb-2">연락처</h3>
+          <a
+            href="/contact"
+            className="text-xl font-semibold mb-2 hover:underline underline-offset-3"
+          >
+            {t('commons.contact')}
+          </a>
           <p className="mb-2">
             <a
               href="mailto:nowrobin3@gmail.com"

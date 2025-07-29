@@ -22,7 +22,7 @@ export const commonKo = {
   ///
   intro: '소개',
   skillSet: '기술 스택',
-  activity: '경험 & 활동',
+  activities: '경험 & 활동',
   language: '어학 능력',
   education: '학력',
   velog: '블로그 방문하기',

@@ -12,6 +12,7 @@ import {
   Terminal,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 const skills = [
   { name: 'JavaScript', level: 90 },
   { name: 'TypeScript', level: 85 },
@@ -79,6 +80,7 @@ const tabs = [
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState('all');
+  const { t } = useTranslation();
   const allSkills = Object.entries(skillsData).flatMap(([category, data]) =>
     data.skills.map((skill) => ({ ...skill, category })),
   );
@@ -138,7 +140,7 @@ export default function Skills() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              기술 스택
+              {t('commons.skillSet')}
             </motion.h2>
             {/* <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"></p> */}
           </div>
