@@ -1,7 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   useEffect(() => {

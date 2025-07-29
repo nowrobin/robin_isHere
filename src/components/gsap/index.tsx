@@ -103,7 +103,6 @@ export default function GSAPEffect() {
 
   return (
     <div className={cn('mediaGrid')} ref={rootRef}>
-      {/* 예시 미디어 요소 */}
       {images.map((src, index) => (
         <div className={'media'} key={index}>
           <Image
