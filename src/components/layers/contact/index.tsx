@@ -88,6 +88,7 @@ export default function Contact() {
 
       if (response.ok) {
         setSubmitStatus('success');
+        setIsSubmitting(false);
         if (e.currentTarget) {
           e.currentTarget.reset();
         }
@@ -95,6 +96,7 @@ export default function Contact() {
     } catch (error) {
       console.error('Network error:', error);
       setSubmitStatus('error');
+      setIsSubmitting(false);
     }
   };
 

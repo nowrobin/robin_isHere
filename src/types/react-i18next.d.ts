@@ -1,16 +1,13 @@
 import 'react-i18next';
 
-import type detailsEn from './locales/en/translation'; // 'translation' 네임스페이스
+import type detailsEn from './locales/en/translation';
 import { detailsKo } from './locales/ko/translation';
 
 import type commonEn from '../locales/en/common';
 import type commonKo from '../locales/ko/common';
 import { Experience, Hero, ProjectDetail } from '@/types/content';
 
-// 모든 네임스페이스를 포함하는 인터페이스를 정의합니다.
-// 만약 네임스페이스가 여러 개라면 여기에 추가합니다.
 interface I18nNamespaces {
-  // translation: typeof detailsEn; // 영어 'translation.json'의 타입을 가져옴
   commons: { [key: string]: string };
   hero: Hero;
   experience: (typeof detailsKo)['education'];
