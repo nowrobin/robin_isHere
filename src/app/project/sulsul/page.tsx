@@ -254,7 +254,7 @@ export default function SulsulProject() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {t('commons.projectChallenges')}
+            {t('commons.technicalChallengesAndSolutions')}
           </motion.h2>
           <div className="space-y-8">
             {challenges.map((challenge, index) => (
