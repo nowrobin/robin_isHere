@@ -9,6 +9,17 @@ const detailsKo = {
   //Project Section Data
   projects: [
     {
+      title: 'HMH',
+      description: '소상공인을 위한 옥외광고 원스톱 서비스',
+      videoSrc:
+        'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_Regerate.mov',
+      logoSrc: '/projectAssets/hmh/hmh_logo.png',
+      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Vidu'],
+      link: 'https://frontend-five-sepia-55.vercel.app/',
+      github: 'https://github.com/Shinhan-Hackaton-Team-HMH/frontend',
+      projectURL: '/project/hmh',
+    },
+    {
       title: 'Woogyeol - 우리 결혼했어요',
       description: '커스텀 모바일 청첩장 서비스',
       videoSrc:
@@ -74,6 +85,14 @@ const detailsKo = {
 
   //Experience Section Data
   experiences: [
+    {
+      title: '신한 스퀘어 브릿지 해커톤',
+      period: '2025.07 ~ 2025.09',
+      description: '해커톤을 통해 실제 기업과제의 문제를 해결하는 솔루션 구현',
+      type: '활동',
+      result:
+        '기획적인 부분과 비즈니스에대해서 많은 인사이트를 얻고 또한 문제 해결에 대해서 더 깊게 고민하는 경험을 했습니다.',
+    },
     {
       title: '프로그래머스 풀스택 데브코스 4기',
       period: '2024.08 ~ 2025.02',

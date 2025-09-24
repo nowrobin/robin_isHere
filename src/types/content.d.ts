@@ -45,6 +45,7 @@ export interface ExperienceDetail {
   description: string;
   type: string;
   result: string;
+  link?: string;
 }
 
 export interface EducationDetail {

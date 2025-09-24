@@ -15,6 +15,7 @@ interface I18nNamespaces {
   woogyeol: BaseProjectDetails;
   sulsul: BaseProjectDetails;
   skyLogix: SkyLogixProjectDetails;
+  hmh: BaseProjectDetails;
 }
 
 // 모듈 확장
@@ -69,6 +70,7 @@ export interface ProjectTranslation {
   woogyeol: BaseProjectDetails;
   sulsul: BaseProjectDetails;
   skyLogix: SkyLogixProjectDetails;
+  hmh: BaseProjectDetails;
 }
 
 export interface I18nTranslationContent {

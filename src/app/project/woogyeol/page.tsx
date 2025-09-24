@@ -112,7 +112,7 @@ export default function WoogyeolProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Image
-                src="/projectAssets/woogyeol/woogyeolHero.png"
+                src="/projectAssets/woogyeol/woogyeol2.png"
                 alt="Woogyeol 프로젝트 메인 이미지"
                 width={600}
                 height={500}

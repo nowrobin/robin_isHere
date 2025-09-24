@@ -178,6 +178,64 @@ export const ProjectTransEn = {
       'Tailwind CSS',
     ],
   },
+  hmh: {
+    title: 'HMH - Ad One-Stop Solution',
+    shortDescription: 'Flatbread Company Project',
+    team: '3 members in total',
+    members: '1 Frontend Developer, 1 Backend Developer, 1 Designer',
+    detailedDescription:
+      'This project delivers a one-stop advertising solution that empowers small business owners to create professional ad videos with ease through AI-powered video generation. By simply selecting budget, campaign period, and target location, the system automatically recommends the most suitable media devices for the business type and efficiently allocates the budget. As a result, the entire process—from ad creation to execution and final subscription—can be completed seamlessly within a single platform',
+    mainFeature: [
+      'AI-powered ad creative generation',
+      'AI-driven media device recommendation',
+      'Automated budget allocation',
+      'Ad creative validation',
+    ],
+    mainRole:
+      'UI development, automated budget allocation, media device recommendation',
+    projectImages: [
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_businessUpload.mov',
+        alt: 'Business registration',
+        description:
+          'Verify business information using a business registration certificate',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_AutoBudgetDistribution.mov',
+        alt: 'Ad device recommendation and budget allocation',
+        description:
+          'Recommend ad devices and allocate budgets based on the business type',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//rsvpStat.webm',
+        alt: 'Ad creative and template selection',
+        description: 'Upload custom ad images and select ad templates',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos//photoTalk.webm',
+        alt: 'My Page',
+        description:
+          'Track ad impressions and monitor real-time data via My Page',
+      },
+    ],
+    challenges: [
+      {
+        title: 'Simplifying ad creative guidelines and industry restrictions',
+        problem:
+          'Guidelines and restrictions were only provided in PDF, making them difficult for small business owners to understand and apply when creating ad creatives.',
+        solution:
+          'Used FFmpeg to validate media format and file size, and integrated Google Cloud Video API for object recognition, harmful content detection, and text validation.',
+      },
+      {
+        title: 'Limitations of AI video generation',
+        problem:
+          'Existing AI video generation tools produced low-quality results, were costly, and often misinterpreted Korean text as other languages.',
+        solution:
+          'Enhanced quality by converting a single image into a base video and handling text overlay and editing at the server side.',
+      },
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
+  },
 };
 
 export default ProjectTransEn;

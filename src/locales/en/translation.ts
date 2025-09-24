@@ -33,6 +33,15 @@ const detailsEn = {
   //Experience Section Data
   experiences: [
     {
+      title: 'Shinhan Square Bridge Hackathon',
+      period: 'Jul 2025 ~ Sep 2025',
+      description:
+        'Implemented a solution to address real-world corporate challenges through the hackathon.',
+      type: 'Activity',
+      result:
+        'Gained valuable insights into planning and business strategy, and developed deeper problem-solving skills.',
+    },
+    {
       title: 'Programmers Full-stack Dev Course 4th Batch',
       period: 'August 2024 ~ February 2025',
       description:
@@ -63,6 +72,17 @@ const detailsEn = {
 
   //Project Section Data
   projects: [
+    {
+      title: 'HMH',
+      description: 'One-Stop Commercial Solution for micro enterprise',
+      videoSrc:
+        'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_Regerate.mov',
+      logoSrc: '/projectAssets/hmh/hmh_logo.png',
+      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Vidu'],
+      link: 'https://frontend-five-sepia-55.vercel.app/',
+      github: 'https://github.com/Shinhan-Hackaton-Team-HMH/frontend',
+      projectURL: '/project/hmh',
+    },
     {
       title: 'Woogyeol',
       description: 'Custom Mobile Wedding Invitation Service',

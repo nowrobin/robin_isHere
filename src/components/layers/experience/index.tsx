@@ -28,9 +28,12 @@ export default function Experience() {
             {experiences.map((exp, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start">
-                  <h4 className="text-xl font-semibold text-primary">
-                    {exp.title}
-                  </h4>
+                  <div className="flex flex-row gap-10">
+                    <h4 className="text-xl font-semibold text-primary">
+                      {exp.title}
+                    </h4>
+                    {/* 링크 넣기 */}
+                  </div>
                   <span className="text-sm text-white font-bold bg-tertiary px-3 py-1 rounded-full mt-2 md:mt-0">
                     {exp.type}
                   </span>

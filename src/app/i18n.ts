@@ -25,6 +25,7 @@ const resources = {
       woogyeol: ProjectTransEn.woogyeol,
       sulsul: ProjectTransEn.sulsul,
       skyLogix: ProjectTransEn.skyLogix,
+      hmh: ProjectTransEn.hmh,
     },
   },
   ko: {
@@ -39,6 +40,7 @@ const resources = {
       woogyeol: ProjectTransKo.woogyeol,
       sulsul: ProjectTransKo.sulsul,
       skyLogix: ProjectTransKo.skyLogix,
+      hmh: ProjectTransKo.hmh,
     },
   },
 } as const; // 타입을 명확히 하기 위해 `as const`를 사용합니다.

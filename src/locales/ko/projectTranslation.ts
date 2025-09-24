@@ -164,6 +164,75 @@ const ProjectTransKo = {
       'Tailwind CSS',
     ],
   },
+  hmh: {
+    title: 'HMH - 광고 윈스탑 솔루션',
+    shortDescription: '플랫브래드 기업과제',
+    team: '총 3명',
+    members: '프론트엔드 1명, 백엔드 1명, 디자이너 1명',
+    detailedDescription:
+      'AI 영상 생성 기술을 활용하여 자영업자도 전문적인 광고 영상을 손쉽게 제작할 수 있는 원스톱 솔루션입니다. 사용자는 예산, 기간, 위치만 간단히 선택하면 업종 특성에 맞는 송출 기기를 자동으로 추천받고, 예산도 효율적으로 분배됩니다. 이를 통해 광고 기획부터 집행, 그리고 청약까지의 전 과정을 한 번에 빠르고 간편하게 진행할 수 있습니다.',
+    mainFeature: [
+      'AI 광고 소재 제작',
+      'AI 기기 매체 추천',
+      '예산 자동 배분',
+      '광고 소재 검사',
+    ],
+    mainRole: 'UI, 예산 자동분배, 기기 매체 추천',
+    projectImages: [
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_businessUpload.mov',
+        alt: '사업자 등록',
+        description: '사업자 등록증으로 사업자 확인',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_deviceSelection.mov',
+        alt: '광고 기기 추천',
+        description: '업종에 맞게 기기 추천 ',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_AutoBudgetDistribution.mov',
+        alt: '자동 예산 분배',
+        description: '자동 예산 분배',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_VideoGen.mov',
+        alt: '광고 소재 선택 및 탬플릿 선택',
+        description: '원하는 광고 이미지 업로드 및 광고 템플릿 선택',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_Regerate.mov',
+        alt: '소재 가이드라인 검사',
+        description: '광고 소재 규격 및 가이드라인 검사',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_Mypage.mov',
+        alt: '마이페이지',
+        description: '마이페이지를 통해 광고 노출 횟수 및 실시간 데이터 확인',
+      },
+      {
+        src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_ANALYZE.mov',
+        alt: '광고 소재 분석 리포트',
+        description: '광고 영상 분석 데이터 리포트',
+      },
+    ],
+    challenges: [
+      {
+        title: '소재 가이드및 업종 제약사항을 어떻게 단축시켜야되는지',
+        problem:
+          'PDF로만 되어있는 가이드라인들과 제약사항들을 소상공인들도 쉽게 사용하술있게 소재 검증',
+        solution:
+          'ffmpeg를 활용해 소재의 대한 규격 용량검증, Google Cloud Video를 사용해서 객체 인식 및 유해성/텍스트 검사',
+      },
+      {
+        title: '영상 생상 AI의 한계점 ',
+        problem:
+          '기존에 영상 생상 AI의 부족한 퀄리티와 요금문제, 한국어 문구를 다른언어로 인식',
+        solution:
+          '문구를 제외한 하나의 이미지를 영사화한뒤, 영상을 문구와 편집을 서버단에서 진행하여 퀄리티를 높였습니다.',
+      },
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
+  },
 };
 
 export default ProjectTransKo;
