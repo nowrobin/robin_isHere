@@ -14,14 +14,14 @@ export default function About() {
         <div className="md:flex md:items-center">
           <div className="md:w-1/3 mb-8 md:mb-0">
             <Image
-              src="/me.jpeg"
+              src="/formal.jpg"
               alt="한정욱"
               width={400}
               height={400}
               className="rounded-lg mx-auto object-cover"
             />
           </div>
-          <div className="md:w-2/3 md:pl-12 text-xl">
+          <div className="md:w-3/4 md:pl-12 text-xl">
             {aboutText.map((text, index) => (
               <p key={index} className="mb-4">
                 {text}

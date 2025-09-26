@@ -7,6 +7,35 @@ import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Video } from '@/components/ui/video/video';
 import { useTranslation } from 'react-i18next';
 import { ProjectChallenge, ProjectImage } from '@/types/react-i18next';
+import { useState } from 'react';
+
+interface ProjectTabsProps {
+  tabs: Array<{
+    id: string;
+    label: string;
+    content: React.ReactNode;
+  }>;
+}
+
+const relatedArticles = [
+  {
+    title: '웹에서 영상 편집 해보기 (ffmpeg)',
+    description:
+      '웹에서 영상을 분석하고 편집할 수 있는 기술인 ffmpeg를 사용한 후기를 작성해보았습니다',
+    url: 'https://velog.io/@nowrobin/%EC%9B%B9%EC%97%90%EC%84%9C-%EC%98%81%EC%83%81-%ED%8E%B8%EC%A7%91-%ED%95%B4%EB%B3%B4%EA%B8%B0-ffmpeg',
+    date: '2025.08.31',
+    readTime: '10분',
+    tags: ['Next.js', 'FFMPEG', '영상 분석'],
+  },
+  {
+    title: '개발을 하기위해 문제를 푼다?',
+    description: '개발의 본질을 생각해서 고민해보았습니다.',
+    url: 'https://velog.io/@nowrobin/%EA%B0%9C%EB%B0%9C%EC%9D%84-%ED%95%98%EA%B8%B0%EC%9C%84%ED%95%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%91%BC%EB%8B%A4',
+    date: '2025.07.30',
+    readTime: '8분',
+    tags: ['개발자', '문제 해결'],
+  },
+];
 
 export default function WoogyeolProject() {
   const { t } = useTranslation();
@@ -150,7 +179,7 @@ export default function WoogyeolProject() {
               <h3 className="text-xl font-semibold mb-4">
                 {t('commons.developmentPeriod')}
               </h3>
-              <p className="text-lg">2025.02 ~ 2025.06</p>
+              <p className="text-lg">2025.07 ~ 2025.09</p>
               {/* <p className="text-md mt-2">프로그래머스 풀스택 최종 프로젝트</p> */}
             </motion.div>
             <motion.div
@@ -279,6 +308,47 @@ export default function WoogyeolProject() {
               </motion.div>
             ))}
           </div>
+          <motion.h2
+            className="text-3xl font-bold my-12 text-center text-primary"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {t('commons.relatedArticle')}
+          </motion.h2>
+          <ul className="space-y-8">
+            {relatedArticles.map((article, index) => (
+              <li key={index} className="mb-4">
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-tertiary transition-colors"
+                >
+                  <h4 className="text-lg font-semibold">{article.title}</h4>
+                </a>
+                <p className="text-gray-600">{article.description}</p>
+                <div className="flex items-center mt-2">
+                  <span className="text-sm text-gray-500">{article.date}</span>
+                  <span className="mx-2 text-sm text-gray-500">•</span>
+                  <span className="text-sm text-gray-500">
+                    {article.readTime}
+                  </span>
+                  <div className="ml-auto">
+                    {article.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </motion.section>
     </div>

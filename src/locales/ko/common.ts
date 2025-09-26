@@ -12,6 +12,7 @@ export const commonKo = {
   developmentPeriod: '개발 기간',
   frontendDevelopment: '프론트엔드 개발',
   keyFeatures: '주요 기능',
+  relatedArticle: '관련 아티클',
   myRole: '담당 역할',
   projectScreenshots: '프로젝트 스크린샷',
   technicalChallengesAndSolutions: '기술적 도전과 해결',

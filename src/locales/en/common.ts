@@ -12,6 +12,7 @@ export const commonEn = {
   developmentPeriod: 'Development Period',
   frontendDevelopment: 'Frontend Development',
   keyFeatures: 'Key Features',
+  relatedArticle: 'Related Article',
   myRole: 'My Role',
   projectScreenshots: 'Project Screenshots',
   technicalChallengesAndSolutions: 'Technical Challenges and Solutions',

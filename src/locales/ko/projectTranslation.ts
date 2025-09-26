@@ -187,7 +187,7 @@ const ProjectTransKo = {
       {
         src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_deviceSelection.mov',
         alt: '광고 기기 추천',
-        description: '업종에 맞게 기기 추천 ',
+        description: '업종에 맞는 광고기기 추천 ',
       },
       {
         src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_AutoBudgetDistribution.mov',
@@ -196,7 +196,7 @@ const ProjectTransKo = {
       },
       {
         src: 'https://sceokvekldkqtdriqqpo.supabase.co/storage/v1/object/public/videos/HMH_VideoGen.mov',
-        alt: '광고 소재 선택 및 탬플릿 선택',
+        alt: '광고 탬플릿 및 소재 선택',
         description: '원하는 광고 이미지 업로드 및 광고 템플릿 선택',
       },
       {
@@ -219,7 +219,7 @@ const ProjectTransKo = {
       {
         title: '소재 가이드 및 업종 제약사항을 어떻게 단축시켜야되는지',
         problem:
-          'PDF로만 되어있는 가이드라인들과 제약사항들을 소상공인들도 쉽게 사용할수있게 소재 검증',
+          'PDF로만 제공되는 가이드라인과 제약사항들을 소상공인들도 쉽게 검증할 수 있도록 소재 검증을 합니다.',
         solution:
           'ffmpeg를 활용해 소재의 대한 규격 용량검증, Google Cloud Video를 사용해서 객체 인식 및 유해성/텍스트 검사',
       },
