@@ -20,7 +20,7 @@ const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
   return (
     <>
       {children}
-      <div className="fixed bottom-4 right-4 z-50 group">
+      <div className="fixed bottom-10 right-10 z-50 group scale-125 md:scale-150  ">
         <motion.button
           className="relative w-20 h-10 bg-gray-200 group-hover:bg-primaryColor rounded-full p-1 transition-colors duration-300"
           onClick={handleLanguageToggle}
