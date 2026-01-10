@@ -166,7 +166,7 @@ const ProjectTransKo = {
   },
   hmh: {
     title: 'HMH - 광고 윈스탑 솔루션',
-    shortDescription: '플랫브래드 기업과제',
+    shortDescription: '플랫브레드 기업과제',
     team: '총 3명',
     members: '프론트엔드 1명, 백엔드 1명, 디자이너 1명',
     detailedDescription:
