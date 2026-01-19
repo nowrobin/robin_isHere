@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 import './i18n';
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased no-scrollbar`}
       >
         <I18nProvider>{children}</I18nProvider>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS ?? ''} />
         <SpeedInsights />
         <Analytics />
       </body>
