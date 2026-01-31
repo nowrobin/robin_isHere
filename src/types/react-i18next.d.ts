@@ -40,6 +40,15 @@ export interface ProjectChallenge {
   solution: string;
 }
 
+export interface RelatedArticle {
+  title: string;
+  description: string;
+  url: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+}
+
 // SkyLogix의 'points' 배열 아이템 타입 (옵셔널)
 export interface SkyLogixPoint {
   point: string;
@@ -58,12 +67,15 @@ export interface BaseProjectDetails {
   techStack: string[];
   team: string;
   members: string;
+  relatedArticles: RelatedArticle[];
 }
 
 export interface SkyLogixProjectDetails extends BaseProjectDetails {
   points: SkyLogixPoint[];
   results: string[];
   format: string[];
+  developmentPeriod: string;
+  developmentNote: string;
 }
 
 export interface ProjectTranslation {

@@ -60,6 +60,7 @@ export const ProjectTransEn = {
       'Zustand',
       'Playwright',
     ],
+    relatedArticles: [],
   },
   sulsul: {
     title: 'SULSUL',
@@ -123,10 +124,15 @@ export const ProjectTransEn = {
       'Zustand',
       'NextAuth',
     ],
+    relatedArticles: [],
   },
   skyLogix: {
     title: 'SkyLogix Aviation',
     shortDescription: 'Aviation Academy Website',
+    team: 'Personal Project',
+    members: 'Solo',
+    developmentPeriod: '2025.03 ~ 2025.04',
+    developmentNote: '1-month focused build',
     detailedDescription:
       'SkyLogix Aviation is the official website of an aviation academy specializing in aircraft rental and pilot training. The entire project, from planning to design and development, was implemented end-to-end to create a high-quality business website.',
     mainFeature: [
@@ -134,6 +140,7 @@ export const ProjectTransEn = {
       'Resume-based Question Generation & Feedback',
     ], // This seems to be a copy-paste error from SULSUL, keeping it as is per the original format.
     mainRole: 'UI Implementation, API Integration, Storybook Deployment', // This seems to be a copy-paste error from SULSUL, keeping it as is per the original format.
+    challenges: [],
     points: [
       {
         point: 'End-to-End Development',
@@ -177,6 +184,7 @@ export const ProjectTransEn = {
       'Shadcn',
       'Tailwind CSS',
     ],
+    relatedArticles: [],
   },
   hmh: {
     title: 'HMH - Ad One-Stop Solution',
@@ -235,6 +243,35 @@ export const ProjectTransEn = {
       },
     ],
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
+    relatedArticles: [
+      {
+        title: 'Shinhan Square Bridge Hackathon Retrospective',
+        description:
+          'A retrospective on wrapping up the Shinhan Square Bridge hackathon.',
+        url: 'https://velog.io/@nowrobin/%EC%8B%A0%ED%95%9C-%EC%8A%A4%ED%80%98%EC%96%B4-%EB%B8%8C%EB%A6%BF%EC%A7%80-%ED%95%B4%EC%BB%A4%ED%86%A4-%ED%9B%84%EA%B8%B0',
+        date: '2025.09.09',
+        readTime: '5 min',
+        tags: ['Shinhan Hackathon', 'Retrospective', 'Innovation Award'],
+      },
+      {
+        title: 'Editing Videos on the Web (ffmpeg)',
+        description:
+          'A write-up on using FFmpeg to analyze and edit videos on the web.',
+        url: 'https://velog.io/@nowrobin/%EC%9B%B9%EC%97%90%EC%84%9C-%EC%98%81%EC%83%81-%ED%8E%B8%EC%A7%91-%ED%95%B4%EB%B3%B4%EA%B8%B0-ffmpeg',
+        date: '2025.08.31',
+        readTime: '10 min',
+        tags: ['Next.js', 'FFMPEG', 'Video Processing'],
+      },
+      {
+        title: 'Why Solve Problems to Build?',
+        description:
+          'Reflections on the essence of development and problem solving.',
+        url: 'https://velog.io/@nowrobin/%EA%B0%9C%EB%B0%9C%EC%9D%84-%ED%95%98%EA%B8%B0%EC%9C%84%ED%95%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%91%BC%EB%8B%A4',
+        date: '2025.07.30',
+        readTime: '8 min',
+        tags: ['Developer', 'Problem Solving'],
+      },
+    ],
   },
 };
 

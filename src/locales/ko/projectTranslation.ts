@@ -54,6 +54,7 @@ const ProjectTransKo = {
       'Zustand',
       'Playwright',
     ],
+    relatedArticles: [],
   },
   sulsul: {
     title: 'SULSUL - 올인원 면접연습 서비스',
@@ -111,16 +112,20 @@ const ProjectTransKo = {
       'Zustand',
       'NextAuth',
     ],
+    relatedArticles: [],
   },
   skyLogix: {
     title: 'SkyLogix Aviation',
     shortDescription: '항공 아카데미 웹사이트',
     team: '개인 프로젝트',
     members: '솔로',
+    developmentPeriod: '2025.03 ~ 2025.04',
+    developmentNote: '1개월 집중 개발',
     detailedDescription:
       'SkyLogix Aviation은 항공기 대여 및 조종사 교육을 전문으로 하는 항공 아카데미의 공식 웹사이트입니다. 전체 프로젝트 기획부터 디자인, 개발까지 End-to-End로 구현하여 완성도 높은 비즈니스 웹사이트를 제작했습니다.',
     mainFeature: ['AI 면접 연습', '자소서 기반 질문 생성 및 피드백'],
     mainRole: 'UI 구현, API 연동, Storybook 배포',
+    challenges: [],
     points: [
       {
         point: 'End-to-End 개발',
@@ -163,6 +168,7 @@ const ProjectTransKo = {
       'Shadcn',
       'Tailwind CSS',
     ],
+    relatedArticles: [],
   },
   hmh: {
     title: 'HMH - 광고 윈스탑 솔루션',
@@ -232,6 +238,34 @@ const ProjectTransKo = {
       },
     ],
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
+    relatedArticles: [
+      {
+        title: '신한 스퀘어 브릿지 해커톤 후기',
+        description:
+          '신한 스퀘어 브릿지를 마무리하며 회고록을 작성해보았습니다',
+        url: 'https://velog.io/@nowrobin/%EC%8B%A0%ED%95%9C-%EC%8A%A4%ED%80%98%EC%96%B4-%EB%B8%8C%EB%A6%BF%EC%A7%80-%ED%95%B4%EC%BB%A4%ED%86%A4-%ED%9B%84%EA%B8%B0',
+        date: '2025.09.09',
+        readTime: '5분',
+        tags: ['신한 해커톤', '회고록', '혁신상'],
+      },
+      {
+        title: '웹에서 영상 편집 해보기 (ffmpeg)',
+        description:
+          '웹에서 영상을 분석하고 편집할 수 있는 기술인 FFmpeg를 사용한 후기를 작성해보았습니다',
+        url: 'https://velog.io/@nowrobin/%EC%9B%B9%EC%97%90%EC%84%9C-%EC%98%81%EC%83%81-%ED%8E%B8%EC%A7%91-%ED%95%B4%EB%B3%B4%EA%B8%B0-ffmpeg',
+        date: '2025.08.31',
+        readTime: '10분',
+        tags: ['Next.js', 'FFMPEG', '영상 분석'],
+      },
+      {
+        title: '개발을 하기 위해 문제를 푼다?',
+        description: '개발의 본질을 생각해서 고민해보았습니다.',
+        url: 'https://velog.io/@nowrobin/%EA%B0%9C%EB%B0%9C%EC%9D%84-%ED%95%98%EA%B8%B0%EC%9C%84%ED%95%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%91%BC%EB%8B%A4',
+        date: '2025.07.30',
+        readTime: '8분',
+        tags: ['개발자', '문제 해결'],
+      },
+    ],
   },
 };
 

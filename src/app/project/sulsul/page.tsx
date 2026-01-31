@@ -5,7 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Video } from '@/components/ui/video/video';
-import { ProjectChallenge, ProjectImage } from '@/types/react-i18next';
+import {
+  ProjectChallenge,
+  ProjectImage,
+  RelatedArticle,
+} from '@/types/react-i18next';
 import { useTranslation } from 'react-i18next';
 
 export default function SulsulProject() {
@@ -23,6 +27,9 @@ export default function SulsulProject() {
   const mainFeature = t('sulsul.mainFeature', {
     returnObjects: true,
   }) as string[];
+  const relatedArticles = t('sulsul.relatedArticles', {
+    returnObjects: true,
+  }) as RelatedArticle[];
 
   return (
     <div className="min-h-screen bg-quaternary">
@@ -288,6 +295,55 @@ export default function SulsulProject() {
               </motion.div>
             ))}
           </div>
+          <motion.h2
+            className="text-3xl font-bold my-12 text-center text-primary"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {t('commons.relatedArticle')}
+          </motion.h2>
+          {relatedArticles.length === 0 ? (
+            <p className="text-center text-gray-600">
+              {t('commons.noRelatedArticles')}
+            </p>
+          ) : (
+            <ul className="space-y-8">
+              {relatedArticles.map((article, index) => (
+                <li key={index} className="mb-4">
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-tertiary transition-colors"
+                  >
+                    <h4 className="text-lg font-semibold">{article.title}</h4>
+                  </a>
+                  <p className="text-gray-600">{article.description}</p>
+                  <div className="flex items-center mt-2">
+                    <span className="text-sm text-gray-500">
+                      {article.date}
+                    </span>
+                    <span className="mx-2 text-sm text-gray-500">•</span>
+                    <span className="text-sm text-gray-500">
+                      {article.readTime}
+                    </span>
+                    <div className="ml-auto">
+                      {article.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </motion.section>
     </div>

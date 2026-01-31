@@ -5,35 +5,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Video } from '@/components/ui/video/video';
-
-const projectImages = [
-  {
-    src: '/projectAssets/skyLogix/skyLogixPlanes.png',
-    alt: '항공기 대여 페이지',
-    description: '다양한 항공기 모델과 대여 옵션을 제공하는 페이지',
-  },
-  {
-    src: '/projectAssets/skyLogix/skyLogixSteps.png',
-    alt: '조종사 교육 서비스',
-    description: '전문 조종사 교육 프로그램 소개',
-  },
-  {
-    src: '/projectAssets/skyLogix/skyLogixContact.png',
-    alt: '문의 양식',
-    description: 'Node-mailer를 활용한 실시간 이메일 문의 시스템',
-  },
-];
-
-const techStack = [
-  'Next.js',
-  'TypeScript',
-  'Node-mailer',
-  'Vercel',
-  'Shadcn',
-  'Tailwind CSS',
-];
+import { useTranslation } from 'react-i18next';
+import {
+  ProjectImage,
+  RelatedArticle,
+  SkyLogixPoint,
+} from '@/types/react-i18next';
 
 export default function SkyLogixProject() {
+  const { t } = useTranslation();
+  const projectImages = t('skyLogix.projectImages', {
+    returnObjects: true,
+  }) as ProjectImage[];
+  const techStack = t('skyLogix.techStack', {
+    returnObjects: true,
+  }) as string[];
+  const points = t('skyLogix.points', {
+    returnObjects: true,
+  }) as SkyLogixPoint[];
+  const format = t('skyLogix.format', {
+    returnObjects: true,
+  }) as string[];
+  const results = t('skyLogix.results', {
+    returnObjects: true,
+  }) as string[];
+  const relatedArticles = t('skyLogix.relatedArticles', {
+    returnObjects: true,
+  }) as RelatedArticle[];
+
   return (
     <div className="min-h-screen bg-quaternary">
       <motion.header
@@ -48,7 +47,7 @@ export default function SkyLogixProject() {
             className="inline-flex items-center gap-2 hover:text-tertiary transition-colors mb-4"
           >
             <ArrowLeft size={20} />
-            포트폴리오로 돌아가기
+            {t('commons.backToPortfolio')}
           </Link>
           <div className="flex items-center gap-4">
             <Image
@@ -59,8 +58,10 @@ export default function SkyLogixProject() {
               className="rounded-full"
             />
             <>
-              <h1 className="text-4xl font-bold">SkyLogix Aviation</h1>
-              <p className="text-xl mt-2">항공 아카데미 웹사이트</p>
+              <h1 className="text-4xl font-bold">{t('skyLogix.title')}</h1>
+              <p className="text-xl mt-2">
+                {t('skyLogix.shortDescription')}
+              </p>
             </>
           </div>
         </div>
@@ -79,13 +80,10 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-3xl font-bold mb-6 text-primary">
-                프로젝트 개요
+                {t('commons.projectOverview')}
               </h2>
               <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                SkyLogix Aviation은 항공기 대여 및 조종사 교육을 전문으로 하는
-                항공 아카데미의 공식 웹사이트입니다. 전체 프로젝트 기획부터
-                디자인, 개발까지 End-to-End로 구현하여 완성도 높은 비즈니스
-                웹사이트를 제작했습니다.
+                {t('skyLogix.detailedDescription')}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {techStack.map((tech, index) => (
@@ -108,7 +106,7 @@ export default function SkyLogixProject() {
                   className="inline-flex items-center gap-2  border-1 border-primary bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary hover:text-secondaryColor transition-colors"
                 >
                   <ExternalLink size={20} />
-                  라이브 데모
+                  {t('commons.liveDemo')}
                 </a>
                 <a
                   href="https://github.com/nowrobin/SkyLogixAviation"
@@ -154,7 +152,7 @@ export default function SkyLogixProject() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            프로젝트 상세 정보
+            {t('commons.projectDetails')}
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -164,9 +162,11 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4">개발 기간</h3>
-              <p className="text-lg">2025.03 ~ 2025.04</p>
-              <p className="text-sm mt-2">1개월 집중 개발</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t('commons.developmentPeriod')}
+              </h3>
+              <p className="text-lg">{t('skyLogix.developmentPeriod')}</p>
+              <p className="text-sm mt-2">{t('skyLogix.developmentNote')}</p>
             </motion.div>
             <motion.div
               className="text-center"
@@ -175,9 +175,11 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4">개발 형태</h3>
-              <p className="text-lg">개인 프로젝트</p>
-              <p className="text-sm mt-2">풀스택 개발</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t('commons.projectFormat')}
+              </h3>
+              <p className="text-lg">{format[0]}</p>
+              <p className="text-sm mt-2">{format[1]}</p>
             </motion.div>
             <motion.div
               className="text-center"
@@ -186,9 +188,11 @@ export default function SkyLogixProject() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4">주요 성과</h3>
-              <p className="text-lg">비즈니스 웹사이트</p>
-              <p className="text-sm mt-2">실제 운영 중인 상업적 웹사이트</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t('commons.projectResults')}
+              </h3>
+              <p className="text-lg">{results[0]}</p>
+              <p className="text-sm mt-2">{results[1]}</p>
             </motion.div>
           </div>
         </div>
@@ -208,7 +212,7 @@ export default function SkyLogixProject() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            프로젝트 스크린샷
+            {t('commons.projectScreenshots')}
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectImages.map((image, index) => (
@@ -256,52 +260,74 @@ export default function SkyLogixProject() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            주요 특징
+            {t('commons.keyFeatures')}
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              className="bg-gray-50 rounded-lg p-6 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-primary">
-                End-to-End 개발
-              </h3>
-              <p className="text-gray-700">
-                프로젝트 기획부터 디자인, 개발, 배포까지 전 과정을 단독으로 진행
-              </p>
-            </motion.div>
-            <motion.div
-              className="bg-gray-50 rounded-lg p-6 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-primary">
-                이메일 시스템
-              </h3>
-              <p className="text-gray-700">
-                Node-mailer를 활용한 실시간 문의 및 예약 시스템 구현
-              </p>
-            </motion.div>
-            <motion.div
-              className="bg-gray-50 rounded-lg p-6 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-primary">
-                반응형 디자인
-              </h3>
-              <p className="text-gray-700">
-                모든 디바이스에서 최적화된 사용자 경험 제공
-              </p>
-            </motion.div>
+            {points.map((point, index) => (
+              <motion.div
+                key={point.point}
+                className="bg-gray-50 rounded-lg p-6 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  {point.point}
+                </h3>
+                <p className="text-gray-700">{point.detail}</p>
+              </motion.div>
+            ))}
           </div>
+          <motion.h2
+            className="text-3xl font-bold my-12 text-center text-primary"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {t('commons.relatedArticle')}
+          </motion.h2>
+          {relatedArticles.length === 0 ? (
+            <p className="text-center text-gray-600">
+              {t('commons.noRelatedArticles')}
+            </p>
+          ) : (
+            <ul className="space-y-8">
+              {relatedArticles.map((article, index) => (
+                <li key={index} className="mb-4">
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-tertiary transition-colors"
+                  >
+                    <h4 className="text-lg font-semibold">{article.title}</h4>
+                  </a>
+                  <p className="text-gray-600">{article.description}</p>
+                  <div className="flex items-center mt-2">
+                    <span className="text-sm text-gray-500">
+                      {article.date}
+                    </span>
+                    <span className="mx-2 text-sm text-gray-500">•</span>
+                    <span className="text-sm text-gray-500">
+                      {article.readTime}
+                    </span>
+                    <div className="ml-auto">
+                      {article.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </motion.section>
     </div>

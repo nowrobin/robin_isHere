@@ -55,6 +55,11 @@
     @apply bg-background text-title font-sans;
   }
 }
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
 @theme {
   /* --color-background: #011f26; */
   --color-background: #ffff;
@@ -200,5 +205,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
