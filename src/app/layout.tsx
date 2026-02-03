@@ -28,6 +28,9 @@ export const metadata = {
     ],
     apple: '/favicon/apple-touch-icon.png',
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC ?? '',
+  },
 };
 export default async function RootLayout({
   children,
@@ -37,7 +40,8 @@ export default async function RootLayout({
   const cookieStore = await cookies();
   const headerStore = await headers();
   const localeCookie = cookieStore.get('locale')?.value;
-  const acceptLanguage = headerStore.get('accept-language')?.toLowerCase() ?? '';
+  const acceptLanguage =
+    headerStore.get('accept-language')?.toLowerCase() ?? '';
   const initialLocale =
     localeCookie === 'en' || localeCookie === 'ko'
       ? localeCookie
