@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/next';
 import './i18n';
 import I18nProvider from '@/components/i18n/i18nProvider';
 import ClarityInit from '@/components/analytics/clarity';
+import { cookies, headers } from 'next/headers';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -28,17 +29,28 @@ export const metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
 };
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const headerStore = await headers();
+  const localeCookie = cookieStore.get('locale')?.value;
+  const acceptLanguage = headerStore.get('accept-language')?.toLowerCase() ?? '';
+  const initialLocale =
+    localeCookie === 'en' || localeCookie === 'ko'
+      ? localeCookie
+      : acceptLanguage.startsWith('ko') || acceptLanguage.includes('ko')
+        ? 'ko'
+        : 'en';
+
   return (
-    <html lang="en">
+    <html lang={initialLocale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased no-scrollbar`}
       >
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider initialLocale={initialLocale}>{children}</I18nProvider>
         <ClarityInit />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS ?? ''} />
         <SpeedInsights />

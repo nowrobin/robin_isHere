@@ -1,21 +1,32 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import '../../app/i18n';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 interface I18nProviderProps {
   children: ReactNode;
+  initialLocale: 'ko' | 'en';
 }
 
-const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
+const I18nProvider: React.FC<I18nProviderProps> = ({
+  children,
+  initialLocale,
+}) => {
   const { i18n } = useTranslation();
-  const isKorean = i18n.language === 'ko';
+  const [locale, setLocale] = useState<'ko' | 'en'>(initialLocale);
+  const isKorean = locale === 'ko';
+
+  if (i18n.language !== locale) {
+    i18n.changeLanguage(locale);
+  }
 
   const handleLanguageToggle = () => {
     const newLang = isKorean ? 'en' : 'ko';
+    setLocale(newLang);
     i18n.changeLanguage(newLang);
+    document.cookie = `locale=${newLang}; path=/; max-age=31536000`;
   };
   return (
     <>
