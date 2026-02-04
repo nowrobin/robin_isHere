@@ -133,7 +133,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-primary text-quaternary h-screen">
+    <section id="contact" className="py-10 bg-primary text-quaternary h-screen">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
