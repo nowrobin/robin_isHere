@@ -21,13 +21,19 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title,
     description,
     type: 'article',
+    url: '/blog',
+    publishedTime: '2026-02-03T00:00:00+09:00',
+    authors: ['한정욱'],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title,
     description,
   },

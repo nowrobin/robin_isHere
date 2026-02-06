@@ -18,6 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_URL
+        ? `${process.env.VERCEL_URL}`
+        : 'http://localhost:3000'),
+  ),
   title: 'Jungwook Han | Frontend Developer',
   description:
     '한정욱의 포트폴리오 - 사용자 경험을 중시하는 프론트엔드 개발자, React, Next.js, TypeScript 전문',

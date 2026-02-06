@@ -1,4 +1,28 @@
 const publishedAt = '2026-02-03T00:00:00+09:00';
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
+  (process.env.VERCEL_URL
+    ? `${process.env.VERCEL_URL}`
+    : 'http://localhost:3000');
+
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: '홈',
+      item: siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '블로그',
+      item: `${siteUrl}/blog`,
+    },
+  ],
+};
 
 const faqStructuredData = {
   '@context': 'https://schema.org',
@@ -58,12 +82,29 @@ const articleStructuredData = {
   author: {
     '@type': 'Person',
     name: '한정욱',
+    url: siteUrl,
   },
+  publisher: {
+    '@type': 'Person',
+    name: '한정욱',
+    url: siteUrl,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/blog`,
+  },
+  image: `${siteUrl}/blog/opengraph-image`,
 };
 
 export default function BlogPage() {
   return (
     <main className="bg-beige text-primaryColor">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -113,8 +154,8 @@ const c: Date = new Date('2026-01-01T00:00+09'); // KST 자정
 // a, b, c 모두 Date 타입`}</code>
             </pre>
             <p className="mt-3 text-sm text-secondaryColor/80">
-              TypeScript에서는 세 값 모두 동일하게 Date 타입으로 취급된다. 문제는
-              서로 다른 의미의 값이 같은 타입으로 표현된다는 점이다.
+              TypeScript에서는 세 값 모두 동일하게 Date 타입으로 취급된다.
+              문제는 서로 다른 의미의 값이 같은 타입으로 표현된다는 점이다.
             </p>
           </div>
         </section>
@@ -262,7 +303,9 @@ const key = date.toISOString().split('T')[0];`}</code>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-primaryColor">세 줄 요약</h2>
+          <h2 className="text-2xl font-semibold text-primaryColor">
+            세 줄 요약
+          </h2>
           <ul className="mt-4 list-disc pl-5">
             <li>Date는 날짜가 아니다.</li>
             <li>Date는 UTC 기준의 “순간”이다.</li>
