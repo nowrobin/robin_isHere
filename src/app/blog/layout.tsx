@@ -1,41 +1,20 @@
 import type { Metadata } from 'next';
 
-const title = '블로그 | Date는 날짜가 아니다: 타임존 실수를 막는 기준 정리';
-const description =
-  'Date 타입을 날짜로 착각하면 왜 문제가 생기는지, UTC/KST/ISO 8601 기준과 실제 실수 사례로 정리합니다. 질문-답변 중심으로 빠르게 이해할 수 있게 구성했습니다.';
-
 export const metadata: Metadata = {
-  title,
-  description,
-  keywords: [
-    'Date 타입',
-    'JavaScript Date',
-    'TypeScript',
-    'UTC',
-    'KST',
-    'ISO 8601',
-    '타임존',
-    '날짜 처리',
-  ],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: '/blog',
-  },
+  title: '블로그 | 한정욱',
+  description: '개발하면서 정리한 글 모음 - 프론트엔드, TypeScript, React, Next.js',
+  robots: { index: true, follow: true },
+  alternates: { canonical: '/blog' },
   openGraph: {
-    title,
-    description,
-    type: 'article',
+    title: '블로그 | 한정욱',
+    description: '개발하면서 정리한 글 모음',
+    type: 'website',
     url: '/blog',
-    publishedTime: '2026-02-03T00:00:00+09:00',
-    authors: ['한정욱'],
   },
   twitter: {
     card: 'summary_large_image',
-    title,
-    description,
+    title: '블로그 | 한정욱',
+    description: '개발하면서 정리한 글 모음',
   },
 };
 

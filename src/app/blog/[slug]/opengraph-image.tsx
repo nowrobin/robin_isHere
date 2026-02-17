@@ -1,11 +1,18 @@
 import { ImageResponse } from 'next/og';
+import { getPostBySlug } from '@/data/posts';
 
 export const runtime = 'edge';
-export const alt = 'Date는 날짜가 아니다: 타임존 실수를 막는 기준 정리';
+export const alt = '블로그 글';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function Image() {
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  const title = post?.title ?? '블로그';
+  const description = post?.description ?? '';
+
   return new ImageResponse(
     (
       <div
@@ -32,34 +39,24 @@ export default function Image() {
         </div>
         <div
           style={{
-            fontSize: 52,
-            fontWeight: 'bold',
-            color: '#f0f2f1',
-            lineHeight: 1.3,
-            marginBottom: 24,
-          }}
-        >
-          Date는 날짜가 아니다:
-        </div>
-        <div
-          style={{
-            fontSize: 42,
+            fontSize: 48,
             fontWeight: 'bold',
             color: '#f0f2f1',
             lineHeight: 1.3,
             marginBottom: 32,
           }}
         >
-          타임존 실수를 막는 기준 정리
+          {title}
         </div>
         <div
           style={{
             fontSize: 20,
             color: '#B2C9AD',
             lineHeight: 1.6,
+            maxWidth: '80%',
           }}
         >
-          UTC / KST / ISO 8601 기준과 실수 사례 정리
+          {description}
         </div>
       </div>
     ),

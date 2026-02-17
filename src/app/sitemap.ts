@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { posts } from '@/data/posts';
 
 const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -14,6 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseUrl();
   const now = new Date();
 
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
   return [
     {
       url: `${baseUrl}/`,
@@ -23,10 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-02-03T00:00:00+09:00'),
-      changeFrequency: 'monthly',
+      lastModified: now,
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
+    ...blogEntries,
     {
       url: `${baseUrl}/contact`,
       lastModified: now,
