@@ -4,7 +4,7 @@ import { EducationDetail, ExperienceDetail } from '@/types/content';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { name: 'TOEIC', score: '985', date: '2023.10.29' },
+  { name: 'TOEIC', score: '965', date: '2025.11.30' },
   { name: 'OPIc', score: 'IH', date: '2023.11.03' },
 ];
 
