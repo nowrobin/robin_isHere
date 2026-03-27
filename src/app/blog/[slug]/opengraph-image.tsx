@@ -7,8 +7,8 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 const getBaseUrl = () => {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+    return process.env.NEXT_PUBLIC_VERCEL_URL.replace(/\/$/, '');
   }
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
