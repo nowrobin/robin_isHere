@@ -6,7 +6,7 @@ export default function BlogDashboardPage() {
     <main className="bg-beige text-primaryColor">
       <div className="container mx-auto px-6 py-14 max-w-4xl">
         <header className="mb-10">
-          <h1 className="text-4xl font-bold tracking-tight">블로그</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight">블로그</h1>
           <p className="mt-3 text-lg text-secondaryColor">
             개발하면서 정리한 글 모음
           </p>

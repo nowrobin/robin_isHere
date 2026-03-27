@@ -113,7 +113,7 @@ const key = date.toISOString().split('T')[0];`}</code>
           해석한다는 가정이 깨졌다. 저장은 UTC로, 표시는 KST로 변환해야 하는데
           이를 생략하면서 하루가 밀렸다.
         </p>
-        <div className="mt-4 overflow-hidden rounded-xl border border-tertiary bg-quaternary">
+        <div className="mt-4 overflow-x-auto rounded-xl border border-tertiary bg-quaternary">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-tertiary text-primaryColor">

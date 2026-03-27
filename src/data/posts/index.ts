@@ -14,8 +14,10 @@ export interface BlogPost {
 // ── 새 글 추가 시 여기에 import 하나만 추가 ──
 import { post as dateIsNotADate } from './date-is-not-a-date';
 import { post as hydrationMismatch } from './hydration-mismatch';
+import { post as aeoAiCitation } from './aeo-ai-citation';
 
 export const posts: BlogPost[] = [
+  aeoAiCitation,
   hydrationMismatch,
   dateIsNotADate,
   // 새 글: import 후 이 배열에 추가

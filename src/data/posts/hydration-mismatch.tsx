@@ -94,7 +94,7 @@ Error: Hydration failed because the initial UI does not match what was rendered 
           실행해서 HTML을 만들어내는 환경이다. Node.js든 Edge Runtime이든
           Vercel 서버든, 공통점은 하나다.
         </p>
-        <div className="mt-4 overflow-hidden rounded-xl border border-tertiary bg-quaternary">
+        <div className="mt-4 overflow-x-auto rounded-xl border border-tertiary bg-quaternary">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-tertiary text-primaryColor">
@@ -147,7 +147,7 @@ Error: Hydration failed because the initial UI does not match what was rendered 
           Hydration은 서버와 클라이언트가 동일한 결과를 낸다고 가정한다.
           그런데 현실적으로 아래 값들은 서버와 클라이언트에서 완전히 다르다.
         </p>
-        <div className="mt-4 overflow-hidden rounded-xl border border-tertiary bg-quaternary">
+        <div className="mt-4 overflow-x-auto rounded-xl border border-tertiary bg-quaternary">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-tertiary text-primaryColor">
@@ -199,7 +199,7 @@ Error: Hydration failed because the initial UI does not match what was rendered 
 const authed = useAuthStore((s) => s.authed);
 return authed ? <App /> : <Login />;`}</code>
         </pre>
-        <div className="mt-6 overflow-hidden rounded-xl border border-tertiary bg-quaternary">
+        <div className="mt-6 overflow-x-auto rounded-xl border border-tertiary bg-quaternary">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-tertiary text-primaryColor">

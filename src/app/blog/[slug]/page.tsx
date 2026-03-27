@@ -126,7 +126,7 @@ export default async function BlogPostPage({
           <p className="text-sm text-secondaryColor/70">
             {formattedDate} · {post.readTime}
           </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-primaryColor">
+          <h1 className="mt-3 text-2xl sm:text-4xl font-bold tracking-tight text-primaryColor">
             {post.title}
           </h1>
           <p className="mt-4 text-lg leading-relaxed">{post.description}</p>
