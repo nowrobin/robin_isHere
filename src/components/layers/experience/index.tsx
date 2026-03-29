@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const languages = [
   { name: 'TOEIC', score: '965', date: '2025.11.30' },
-  { name: 'OPIc', score: 'IH', date: '2023.11.03' },
+  { name: 'OPIc', score: 'AL', date: '2026.03.25' },
 ];
 
 export default function Experience() {
