@@ -15,8 +15,12 @@ export interface BlogPost {
 import { post as dateIsNotADate } from './date-is-not-a-date';
 import { post as hydrationMismatch } from './hydration-mismatch';
 import { post as aeoAiCitation } from './aeo-ai-citation';
+import { post as monorepoVsPolyrepo } from './monorepo-vs-polyrepo';
+import { post as serpAnalysisForAeo } from './serp-analysis-for-aeo';
 
 export const posts: BlogPost[] = [
+  serpAnalysisForAeo,
+  monorepoVsPolyrepo,
   aeoAiCitation,
   hydrationMismatch,
   dateIsNotADate,
